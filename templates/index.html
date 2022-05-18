@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - My Fruit Shop Orders</title>
+</head>
+
+<body>
+    <h1>My Fruit Shop Orders</h1>
+    {% for order in orders%}
+    <div>
+        <p>
+            Customer Name : {{order.customer_name}}
+            Order Date: {{order.order_date}}
+            Quantity: {{order.quantity}}
+            Fruit: {{order.fruit_name}}
+            <a href="/orders/{{orders.index(order)}}">
+                detail
+
+            </a> <br>
+
+
+
+        </p>
+    </div>
+
+    {% endfor %}
+
+
+</body>
+
+</html>
